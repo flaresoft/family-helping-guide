@@ -93,6 +93,11 @@
   a.jump{ color: var(--brand-dark); font-weight:800; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
   a.jump:active{ opacity:.7; }
 
+  /* ---------- 섹션 그림(일러스트) ---------- */
+  .figure{ display:flex; justify-content:center; margin: 2px 0 14px; }
+  .figure svg{ height:104px; width:auto; }
+  @media (max-width:480px){ .figure svg{ height:86px; } }
+
   /* ---------- 목차(빠른 이동) ---------- */
   nav.toc{ background: var(--card); border:1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
   nav.toc h2{ border:0; margin:0 0 16px; padding:0; font-size:1.25em; }
@@ -221,6 +226,16 @@
   <h1>요양원에 모시기 전,<br>차근차근 알아보기</h1>
   <p class="lede">어렵게 생각하지 않으셔도 됩니다. 아래 순서대로 하나씩, 꼭 필요한 것만 알려드립니다. 글씨가 작으면 오른쪽 위 <strong>‘가＋’</strong> 버튼으로 키우세요.</p>
 
+  <div class="figure" aria-hidden="true">
+    <svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <path d="M20 52 L60 20 L100 52" stroke="#1559cf" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="30" y="50" width="60" height="38" rx="6" fill="#e9f0fc" stroke="#1559cf" stroke-width="6"/>
+      <g transform="translate(48,54)">
+        <path d="M12 21 C12 21 4 13.5 4 8.5 C4 5.4 6.4 3 9.5 3 C11.2 3 12 4.5 12 4.5 C12 4.5 12.8 3 14.5 3 C17.6 3 20 5.4 20 8.5 C20 13.5 12 21 12 21 Z" fill="#c02a20"/>
+      </g>
+    </svg>
+  </div>
+
   <!-- 상황 안내 -->
   <div class="card" style="background:#e9f0fc;border-color:#cfe0fb;">
     <p style="margin-top:0;font-size:1.1em;font-weight:800;">먼저, 지금 상황을 정리하면 이렇습니다</p>
@@ -247,6 +262,15 @@
 
   <!-- ====================== ① 비용 ====================== -->
   <h2 id="cost"><span class="num">1</span>돈이 얼마나 드나요?</h2>
+
+  <div class="figure" aria-hidden="true">
+    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <circle cx="40" cy="50" r="26" fill="#e3f6ea" stroke="#18814a" stroke-width="5"/>
+      <text x="40" y="61" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="900" fill="#18814a">₩</text>
+      <circle cx="70" cy="32" r="17" fill="#ffffff" stroke="#18814a" stroke-width="5"/>
+      <text x="70" y="40" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="900" fill="#18814a">0</text>
+    </svg>
+  </div>
 
   <p class="lead-answer">의료급여를 받는 어르신은 요양시설 이용료(시설급여)를 <span style="color:var(--ok)">본인이 내지 않습니다 — 0원</span>입니다.</p>
 
@@ -315,6 +339,15 @@
   <!-- ====================== ② 자격 ====================== -->
   <h2 id="qual"><span class="num">2</span>신청할 수 있나요?</h2>
 
+  <div class="figure" aria-hidden="true">
+    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <rect x="14" y="24" width="68" height="48" rx="8" fill="#e9f0fc" stroke="#1559cf" stroke-width="5"/>
+      <text x="44" y="59" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="900" fill="#0f3f96">65+</text>
+      <circle cx="74" cy="60" r="15" fill="#18814a"/>
+      <path d="M67 60 l5 5 l9 -11" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
   <p class="lead-answer"><span style="color:var(--brand-dark)">만 65세가 넘으면, 어떤 병이 있든 누구나 신청할 수 있습니다.</span></p>
 
   <div class="callout key">
@@ -345,6 +378,17 @@
   <!-- ====================== ③ 신청 방법 ====================== -->
   <h2 id="how"><span class="num">3</span>어디에, 어떻게 신청하나요?</h2>
 
+  <div class="figure" aria-hidden="true">
+    <svg viewBox="0 0 120 96" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <line x1="44" y1="40" x2="74" y2="40" stroke="#9db4d6" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 10"/>
+      <path d="M71 33 L80 40 L71 47" stroke="#9db4d6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M30 68 L21 46 A11 11 0 1 1 39 46 Z" fill="#1559cf"/>
+      <circle cx="30" cy="42" r="5" fill="#ffffff"/>
+      <path d="M90 68 L81 46 A11 11 0 1 1 99 46 Z" fill="#c02a20"/>
+      <circle cx="90" cy="42" r="5" fill="#ffffff"/>
+    </svg>
+  </div>
+
   <p class="lead-answer">신청은 <span style="color:var(--brand-dark)">지금 주민등록이 있는 곳(강릉)</span>에서 합니다.</p>
 
   <div class="callout key">
@@ -367,6 +411,16 @@
 
   <!-- ====================== ④ 주소 이전 ====================== -->
   <h2 id="move"><span class="num">4</span>주소(전입신고)는 어디로 옮기나요?</h2>
+
+  <div class="figure" aria-hidden="true">
+    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <path d="M18 48 L48 22 L78 48" stroke="#1559cf" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="26" y="46" width="44" height="38" rx="5" fill="#e3f6ea" stroke="#18814a" stroke-width="5"/>
+      <rect x="42" y="62" width="12" height="22" rx="2" fill="#18814a"/>
+      <circle cx="74" cy="34" r="15" fill="#18814a"/>
+      <path d="M67 34 l5 5 l9 -11" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 
   <p class="lead-answer">주소는 반드시 <span style="color:var(--ok)">‘요양시설’로</span> 옮기세요. <span style="color:var(--bad)">가족 집으로 옮기면 안 됩니다.</span></p>
 
@@ -399,6 +453,20 @@
 
   <!-- ====================== ⑤ 할 일 ====================== -->
   <h2 id="todo"><span class="num">5</span>그래서 우리가 할 일은?</h2>
+
+  <div class="figure" aria-hidden="true">
+    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <rect x="24" y="20" width="48" height="62" rx="8" fill="#e9f0fc" stroke="#1559cf" stroke-width="5"/>
+      <rect x="38" y="14" width="20" height="12" rx="4" fill="#1559cf"/>
+      <path d="M32 40 l4 4 l7 -9" stroke="#18814a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="48" y1="40" x2="64" y2="40" stroke="#9db4d6" stroke-width="4" stroke-linecap="round"/>
+      <path d="M32 56 l4 4 l7 -9" stroke="#18814a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="48" y1="56" x2="64" y2="56" stroke="#9db4d6" stroke-width="4" stroke-linecap="round"/>
+      <path d="M32 72 l4 4 l7 -9" stroke="#18814a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="48" y1="72" x2="64" y2="72" stroke="#9db4d6" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+
   <p class="muted">끝낸 일은 네모를 눌러 체크하세요. (이 기기에 저장됩니다)</p>
 
   <div class="card">
