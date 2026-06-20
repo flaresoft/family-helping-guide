@@ -86,6 +86,12 @@
   .callout.good{ background: var(--ok-bg); border:2px solid #aedcc0; }
   .callout.warn{ background: var(--warn-bg); border:2px solid #f0d59a; }
   .callout p:last-child{ margin-bottom:0; }
+  .callout ul{ margin:8px 0 0; padding-left:1.3em; }
+  .callout li{ margin-bottom:12px; }
+  .callout li:last-child{ margin-bottom:0; }
+  /* 본문 안 이동 링크 */
+  a.jump{ color: var(--brand-dark); font-weight:800; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+  a.jump:active{ opacity:.7; }
 
   /* ---------- 목차(빠른 이동) ---------- */
   nav.toc{ background: var(--card); border:1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
@@ -252,8 +258,10 @@
 
   <div class="callout warn">
     <span class="lbl">⚠️ 단, 이건 기억하세요</span>
-    <p>① 먼저 <strong>‘장기요양 등급’</strong>을 받아야 이 면제가 적용됩니다. (등급 받는 법은 아래 ②번)<br>
-    ② <strong>식대·간식비·이미용비·1~2인실(상급 침실)</strong> 같은 일부 항목은 면제가 아니라 따로 돈이 듭니다. 큰 방(다인실)을 쓰면 부담이 가장 적습니다.</p>
+    <ul>
+      <li>먼저 <strong>‘장기요양 등급’</strong>을 받아야 이 면제가 적용됩니다. (등급 받는 법은 <a class="jump" href="#qual">아래 “신청할 수 있나요” ↓</a>)</li>
+      <li><strong>식대·간식비·이미용비·1~2인실(상급 침실)</strong> 같은 일부 항목은 면제가 아니라 따로 돈이 듭니다. 큰 방(다인실)을 쓰면 부담이 가장 적습니다.</li>
+    </ul>
   </div>
 
   <div class="card">
@@ -347,7 +355,7 @@
   <div class="card">
     <p style="margin-top:0;font-weight:800;">강릉 → 안양으로 갈 때의 순서</p>
     <ol class="flow">
-      <li><span class="who">우리 가족</span>먼저 <strong>장기요양 등급</strong>을 신청해 받습니다. (위 ②번)</li>
+      <li><span class="who">우리 가족</span>먼저 <strong>장기요양 등급</strong>을 신청해 받습니다. (<a class="jump" href="#qual">위 “신청할 수 있나요” ↑</a>)</li>
       <li><span class="who">강릉시</span>입소 신청서를 <strong>강릉시(주소지)</strong>에 냅니다.</li>
       <li><span class="who">강릉 ↔ 안양</span>강릉에 자리가 없으면 강릉시가 <strong>안양시와 협의</strong>합니다.</li>
       <li><span class="who">안양시</span>실제 <strong>입소 결정은 안양시</strong>가 합니다.</li>
