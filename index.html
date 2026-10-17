@@ -361,6 +361,11 @@
     <p>신청하면 <strong>건강보험공단 직원이 직접 방문</strong>해 거동·기억 상태 등을 살펴보고 <strong>‘등급’</strong>을 정합니다. 평소 <strong>자주 넘어지시거나, 거동이 불편하거나, 기억이 흐려지는 일</strong>이 있다면 그 점을 <strong>진단서·의사 소견서에 잘 적어 두는 것</strong>이 등급 받는 데 도움이 됩니다.</p>
   </div>
 
+  <div class="callout key">
+    <span class="lbl">🏥 요양원에 들어가려면 몇 등급이 필요할까요?</span>
+    <p>등급은 <strong>1~5등급</strong>(+치매 어르신용 인지지원등급)으로 나뉩니다. 요양원 입소는 원칙적으로 <strong>1·2등급</strong>이 대상입니다. <strong>3~5등급</strong>이 나와도 <strong>돌봐 줄 가족이 없거나 집에서 지내기 어려운 사정</strong>이 인정되면 입소할 수 있으니, 그런 사정이 있다면 신청할 때 공단에 꼭 말씀하세요.</p>
+  </div>
+
   <div class="card claim" aria-open="false">
     <button class="head" type="button">
       <span class="title">＋ 등급은 어떻게 정해지나요? (자세히)</span>
@@ -372,6 +377,7 @@
         <li>“혼자서 일상생활을 6개월 이상 하기 어렵다”고 인정돼야 등급이 나옵니다.</li>
         <li>술 문제 자체보다, 그로 인한 <strong>반복 낙상·관절 부상·기억력 저하</strong> 등이 조사에서 확인되면 등급에 유리합니다.</li>
         <li>등급이 안 나오면 <strong>이의신청(공단 심사청구)</strong>을 할 수 있습니다.</li>
+        <li>한 번 받은 등급은 정해진 기간 동안 유지되고, 기간이 끝나기 전에 <strong>갱신</strong>합니다. 갱신 뒤 같은 등급이 나오면 유지 기간이 <strong>1등급 5년, 2~4등급 4년</strong>으로 예전보다 길어졌습니다.</li>
       </ul>
     </div>
   </div>
@@ -510,7 +516,7 @@
       <span class="chev" aria-hidden="true">▾</span>
     </button>
     <div class="body">
-      <p>신청하면 공단 직원이 방문조사를 하고, 보통 <strong>신청일로부터 한 달(30일) 안팎</strong>에 등급 결과가 나옵니다. 등급을 받은 뒤 시설과 계약하고 입소합니다. 시설 자리 사정에 따라 더 걸릴 수 있으니, 마음에 둔 시설이 있으면 <strong>미리 대기 상담</strong>을 해 두세요.</p>
+      <p>신청하면 공단 직원이 방문조사를 하고, 보통 <strong>신청일로부터 한 달(30일) 안</strong>에 등급 결과가 나옵니다. (조사가 더 필요하면 최대 30일 더 걸릴 수 있습니다.) 등급을 받은 뒤 시설과 계약하고 입소합니다. 시설 자리 사정에 따라 더 걸릴 수 있으니, 마음에 둔 시설이 있으면 <strong>미리 대기 상담</strong>을 해 두세요.</p>
     </div>
   </div>
 
@@ -564,7 +570,13 @@
 
   <footer>
     <div class="card">
-      <p style="margin-top:0;"><strong>참고 안내</strong></p>
+      <p style="margin-top:0;"><strong>📞 도움 받을 곳</strong></p>
+      <ul style="margin:0 0 16px;padding-left:1.2em;">
+        <li><strong>국민건강보험공단</strong> (장기요양 등급·본인부담): <a class="jump" href="tel:15771000">1577-1000</a></li>
+        <li><strong>보건복지상담센터</strong> (기초생활·의료급여): <a class="jump" href="tel:129">129</a></li>
+        <li><strong>노인장기요양보험 누리집</strong> (시설 찾기): <a class="jump" href="https://www.longtermcare.or.kr" target="_blank" rel="noopener">longtermcare.or.kr</a></li>
+      </ul>
+      <p><strong>참고 안내</strong> <span class="muted">(2026년 10월 기준)</span></p>
       <p>이 안내는 법령·보건복지부·건강보험공단 자료를 바탕으로 쉽게 정리한 것입니다. 다만 제도는 해마다 바뀌고 지역마다 절차가 조금씩 다를 수 있습니다.</p>
       <p style="margin-bottom:0;">실제로 진행하실 때는 <strong>강릉시·안양시 담당부서</strong>와 <strong>입소할 시설</strong>에 한 번 더 확인하시는 것이 가장 정확합니다.</p>
     </div>
@@ -600,7 +612,7 @@
   });
 
   /* ---------- 본인부담금 계산기 ---------- */
-  var rates = { medical: 0, other: 6, normal: 20 };
+  var rates = { medical: 0, other: 8, normal: 20 };
   var rateBig = document.getElementById('rateBig');
   var rateMsg = document.getElementById('rateMsg');
   var resBox  = document.getElementById('calcResult');
@@ -628,7 +640,7 @@
       rateMsg.textContent = '의료급여 수급자(1·2종 모두)는 시설 이용료 본인부담이 전액 면제됩니다. (식대 등 일부 항목은 별도)';
       resBox.classList.add('goodnote');
     } else if(type === 'other'){
-      rateMsg.textContent = '기타(타법) 의료급여 수급자는 면제가 아니라 6%를 부담합니다.';
+      rateMsg.textContent = '기타(타법) 의료급여 수급자는 면제가 아니라 8%를 부담합니다. (일반 20%에서 60% 줄어든 금액)';
       resBox.classList.add('warnote');
     } else {
       rateMsg.textContent = '일반 대상자는 시설 이용료의 20%를 본인부담합니다.';
@@ -678,7 +690,7 @@
     {
       q: '형(형제)이 있으면, 형 때문에 어르신 수급이 끊긴다.',
       answer: false,
-      explain: '아닙니다. 형제자매는 ‘부양의무자’가 아니라서, 형의 소득·재산이 어르신 수급에 합산되지 않습니다. (다만 형 집에 ‘같이 주소를 두는 것’은 별개 이유로 위험합니다 — 위 ④번 참고)'
+      explain: '아닙니다. 형제자매는 ‘부양의무자’가 아니라서, 형의 소득·재산이 어르신 수급에 합산되지 않습니다. 부양의무자는 부모·자녀와 그 배우자뿐이고, 2026년 1월부터는 의료급여의 ‘부양비’ 제도도 없어졌습니다. (다만 형 집에 ‘같이 주소를 두는 것’은 별개 이유로 위험합니다 — 위 ‘주소는 어디로 옮기나요’ 참고)'
     },
     {
       q: '의료급여를 받으면, 요양시설 이용료를 안 내도 된다.',
